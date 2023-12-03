@@ -119,33 +119,33 @@
         }
     </style>
     <style>
-        /* 定义一个名为nav的CSS样式，用于设置列表的背景色，字体颜色，对齐方式等 */
-        ul.nav {
-          list-style: none; /* 去掉列表的默认标记 */
-          margin: 0; /* 去掉列表的默认外边距 */
-          padding: 0; /* 去掉列表的默认内边距 */
-          background-color: #3D99CE; /* 设置列表的背景色为深蓝色 */
-          color: white; /* 设置列表的字体颜色为白色 */
-          text-align: center; /* 设置列表的文本居中对齐 */
-        }
-        
-        /* 定义一个名为nav的CSS样式的子元素li的样式，用于设置列表项的显示方式，间距等 */
-        ul.nav > li {
-          display: inline-block; /* 设置列表项为内联块级元素，使其水平排列 */
-          padding: 10px 20px; /* 设置列表项的内边距为10px上下，20px左右 */
-        }
-        
-        /* 定义一个名为nav的CSS样式的子元素li的悬停效果，用于设置鼠标移动到列表项时的背景色 */
-        ul.nav > li:hover {
-          background-color: #2779BF; /* 设置列表项的背景色为浅蓝色 */
-        }
-        
-        /* 定义一个名为nav的CSS样式的子元素li的子元素a的样式，用于设置列表项中的链接的颜色，去掉下划线等 */
-        ul.nav > li > a {
-          color: white; /* 设置链接的颜色为白色 */
-          text-decoration: none; /* 去掉链接的下划线 */
-        }
-        </style>
+       .nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .nav li {
+      float: left;
+    }
+
+    .nav li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .nav li a:hover {
+      background-color: #ddd;
+    }
+
+    .nav li.active {
+      background-color: #4CAF50;
+    }
+    </style>
 
     <script>
         (function(i, s, o, g, r, a, m) {
@@ -229,17 +229,15 @@
         </table>
     </div>
 
-<h2>Biography</h2>
-    <!-- 使用ul元素创建一个无序列表，并添加nav类 -->
-    <ul class="nav">
-      <!-- 使用li元素创建列表项，并添加a元素创建链接，您可以根据您的需要修改链接的地址和文本 -->
-      <li><a href="/biography">Biography</a></li>
-      <li><a href="/recent-news">Recent News</a></li>
-      <li><a href="/publications">Publications</a></li>
-      <li><a href="/professional-activities">Professional Activities</a></li>
-      <li><a href="/honors-awards">Honors & Awards</a></li>
+<ul class="nav">
+    <li><a href="#biography">Biography</a></li>
+    <li><a href="#recent-news">Recent News</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#professional-activities">Professional Activities</a></li>
+    <li><a href="#honors-awards">Honors & Awards</a></li>
+</ul>
 
-<h2>Biography</h2>
+<h2 id="biography">Biography</h2>
 
 <p>
     I received an M.S. degree in software engineering from Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2016. Subsequently, I earned another M.S. degree in computer information technology from Northern Arizona University (NAU), Flagstaff, AZ, USA, in 2022, and a Ph.D. degree in computer applications from Dalian Maritime University (DMU), Dalian, China, in 2021. At present, I am serving as a postdoctoral researcher at Dalian Maritime University (DMU) and am also a visiting fellow at the Hong Kong Polytechnic University (PolyU), China. I have had the privilege to review for a multitude of journals and conferences including IEEE TIP, TCSVT, TGRS, TIM, SPL, JOE, AI, EAAI, Information Fusion, AMM, CEA, SPIC, Neurocomputing, OE, AAAI, ACCV, and ect.
@@ -251,7 +249,7 @@
 
 	
 
-<h2>Recent News</h2>
+<h2 id="recent-news">Recent News</h2>
 
 <ul>
     <li>
@@ -301,7 +299,7 @@
 </ul>
 
 
-<h2>Publications</h2>
+<h2 id="publications">Publications</h2>
 <ol>
 
 <li>
@@ -555,7 +553,7 @@
 </li>
 
 
-	
+
 <h4><span style="color: red;">Under Review</span></h4>
 <li>
     <a href="#">DGNet: Dynamic Gradient-guided Network with Noise Suppression for Underwater Image Enhancement.</a>
@@ -628,7 +626,7 @@
 
 
 
-<h2>Professional Activities</h2>
+<h2 id="professional-activities">Professional Activities</h2>
 
 <ul>
 <h4><span style="color: red;">Guest Editor</span></h4>
@@ -687,7 +685,7 @@
 <li>电子与信息学报</li>
 </ul>
 
-<h2>Honors & Awards</h2>
+<h2 id="honors-awards">Honors & Awards</h2>
 
 <ol>
  <h4><span style="color: red;">Scholarships</span></h4>
