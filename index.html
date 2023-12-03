@@ -118,6 +118,35 @@
             border-radius: 4px !important;
         }
     </style>
+    <style>
+        /* 定义一个名为nav的CSS样式，用于设置列表的背景色，字体颜色，对齐方式等 */
+        ul.nav {
+          list-style: none; /* 去掉列表的默认标记 */
+          margin: 0; /* 去掉列表的默认外边距 */
+          padding: 0; /* 去掉列表的默认内边距 */
+          background-color: #3D99CE; /* 设置列表的背景色为深蓝色 */
+          color: white; /* 设置列表的字体颜色为白色 */
+          text-align: center; /* 设置列表的文本居中对齐 */
+        }
+        
+        /* 定义一个名为nav的CSS样式的子元素li的样式，用于设置列表项的显示方式，间距等 */
+        ul.nav > li {
+          display: inline-block; /* 设置列表项为内联块级元素，使其水平排列 */
+          padding: 10px 20px; /* 设置列表项的内边距为10px上下，20px左右 */
+        }
+        
+        /* 定义一个名为nav的CSS样式的子元素li的悬停效果，用于设置鼠标移动到列表项时的背景色 */
+        ul.nav > li:hover {
+          background-color: #2779BF; /* 设置列表项的背景色为浅蓝色 */
+        }
+        
+        /* 定义一个名为nav的CSS样式的子元素li的子元素a的样式，用于设置列表项中的链接的颜色，去掉下划线等 */
+        ul.nav > li > a {
+          color: white; /* 设置链接的颜色为白色 */
+          text-decoration: none; /* 去掉链接的下划线 */
+        }
+        </style>
+
     <script>
         (function(i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -138,8 +167,6 @@
         .en-markup-crop-options div div:first-of-type { margin-left: 0px !important; }
     -->
 </head>
-
-
 
 <body ryt12610="1">
     <div id="layout-content" style="margin-top:15px">
@@ -202,6 +229,15 @@
         </table>
     </div>
 
+<h2>Biography</h2>
+    <!-- 使用ul元素创建一个无序列表，并添加nav类 -->
+    <ul class="nav">
+      <!-- 使用li元素创建列表项，并添加a元素创建链接，您可以根据您的需要修改链接的地址和文本 -->
+      <li><a href="/biography">Biography</a></li>
+      <li><a href="/recent-news">Recent News</a></li>
+      <li><a href="/publications">Publications</a></li>
+      <li><a href="/professional-activities">Professional Activities</a></li>
+      <li><a href="/honors-awards">Honors & Awards</a></li>
 
 <h2>Biography</h2>
 
