@@ -1,0 +1,4 @@
+[submodule "newpage"]
+	path = newpage
+	url = https://github.com/zhoujingchun03/zhoujingchun03.github.io.git
+	branch = newpage
