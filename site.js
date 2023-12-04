@@ -151,7 +151,10 @@ $.getJSON('/graduates.json', function (data) {
 
     let phd = data.filter(x => x['finally'].toLowerCase()[0] === 'p')
     let master = data.filter(x => x['finally'].toLowerCase()[0] === 'm')
+    let master22 = data.filter(master => master['img'].split('.')[0].slice(-2) === '22')
+    let master23 = data.filter(master => master['img'].split('.')[0].slice(-2) === '23')
 
     insertList(phd)
-    insertList(master)
+    insertList(master22)
+    insertList(master23)
 });

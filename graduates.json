@@ -49,27 +49,6 @@
         "job_zh": "大连海事大学"
     },
     {
-        "img": "zr22.jpg",
-        "name": "Rui Zhou",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "csh23.jpg",
-        "name": "Shuhan Chen",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "hzx.jpg",
-        "name": "Zongxin He",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
         "img": "lcj23.jpg",
         "name": "Chunjiang Liu",
         "finally": "Master Student",
@@ -84,8 +63,22 @@
         "job_zh": "大连海事大学"
     },
     {
-        "img": "ll23.jpg",
-        "name": "Lei Liu",
+        "img": "hzx.jpg",
+        "name": "Zongxin He",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
+        "img": "csh23.jpg",
+        "name": "Shuhan Chen",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
+        "img": "fwy23.jpg",
+        "name": "Wenyu Fan",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
@@ -98,15 +91,15 @@
         "job_zh": "大连海事大学"
     },
     {
-        "img": "ch23.jpg",
-        "name": "Hao Chen",
+        "img": "ll23.jpg",
+        "name": "Lei Liu",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
     },
     {
-        "img": "fwy23.jpg",
-        "name": "Wenyu Fan",
+        "img": "ch23.jpg",
+        "name": "Hao Chen",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
