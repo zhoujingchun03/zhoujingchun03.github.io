@@ -155,16 +155,16 @@ $.getJSON('/graduates.json', function (data) {
 
     let phdParagraph = document.createElement('p');
     phdParagraph.textContent = '2021 Ph.D. Students';
-    document.body.insertBefore(phdParagraph, document.body.firstChild);
+    document.body.insert(phdParagraph);
     insertList(phd)
 
     let master22Paragraph = document.createElement('p');
     master22Paragraph.textContent = '2022 Master Students';
-    document.body.insertBefore(master22Paragraph, document.body.firstChild);
+    document.body.insert(master22Paragraph);
     insertList(master22)
     
     let master23Paragraph = document.createElement('p');
     master23Paragraph.textContent = '2023 Master Students';
-    document.body.insertBefore(master23Paragraph, document.body.firstChild);
+    document.body.insert(master23Paragraph);
     insertList(master23)
 });
