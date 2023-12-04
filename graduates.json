@@ -14,6 +14,20 @@
         "job_zh": "大连海事大学"
     },
     {
+        "img": "zb22.jpg",
+        "name": "Bo Zhang",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
+        "img": "wsy22.png",
+        "name": "Shiyin Wang",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
         "img": "gs22.jpg",
         "name": "Sen Guo",
         "finally": "Master Student",
@@ -30,20 +44,6 @@
     {
         "img": "lzl22.jpg",
         "name": "Zonglin Liang",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "wsy22.png",
-        "name": "Shiyin Wang",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "zb22.jpg",
-        "name": "Bo Zhang",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
