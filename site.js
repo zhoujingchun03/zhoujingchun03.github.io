@@ -159,17 +159,17 @@ $.getJSON('/graduates.json', function (data) {
 
     let phdParagraph = document.createElement('p');
     phdParagraph.textContent = '2021 Ph.D. Students';
-    let phdList = document.getElementById('phd');
-    phdList.parentNode.insertBefore(phdParagraph, phdList);
+    let phdList = document.getElementById('master22');
+    phdList.parentNode.InsertAfter(phdParagraph, $('#graduates-table'));
 
     let master22Paragraph = document.createElement('p');
     master22Paragraph.textContent = '2022 Master Students';
     let master22List = document.getElementById('master22');
-    master22List.parentNode.insertBefore(master22Paragraph, master22List);
+    master22List.parentNode.insertBefore(master22Paragraph, $('#graduates-table'));
 
     let master23Paragraph = document.createElement('p');
     master23Paragraph.textContent = '2023 Master Students';
     let master23List = document.getElementById('master23'); 
-    master23List.parentNode.insertBefore(master23Paragraph, master23List);
+    master23List.parentNode.insertBefore(master23Paragraph, $('#graduates-table'));
 
 });
