@@ -7,8 +7,29 @@
         "job_zh": "大连海事大学"
     },
     {
+        "img": "gql.jpg",
+        "name": "Qilin Gai",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
         "img": "lty.jpg",
         "name": "Tianyu Liang",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
+        "img": "hzx.jpg",
+        "name": "Zongxin He",
+        "finally": "Research Assistant",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
+        "img": "zr.jpg",
+        "name": "Rui Zhou",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
