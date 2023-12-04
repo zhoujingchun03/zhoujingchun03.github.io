@@ -91,6 +91,13 @@
         "job_zh": "大连海事大学"
     },
     {
+        "img": "ww23.png",
+        "name": "Wei Wang",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
         "img": "ll23.jpg",
         "name": "Lei Liu",
         "finally": "Master Student",
@@ -107,13 +114,6 @@
     {
         "img": "zcy23.jpg",
         "name": "Chenyang Yang",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "ww23.png",
-        "name": "Wei Wang",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
