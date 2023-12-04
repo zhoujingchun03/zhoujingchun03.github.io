@@ -127,9 +127,11 @@ $.getJSON('https://api.github.com/repos/crabwq/crabwq.github.io/commits', functi
 });
 
 $.getJSON('/graduates.json', function (data) {
-    let insertList = function (l) {
+    let insertList = function (l, s) {
         let el = $('#graduates-table')
+        let str = s
 
+        el.html(el.html() + `<tr>${s}</tr>`)
         for (let i = 0; i < (l.length + 3) / 4; i++) {
             let innerHtml = '';
 
@@ -153,23 +155,8 @@ $.getJSON('/graduates.json', function (data) {
     let master22 = data.filter(x => x['img'].split('.')[0].slice(-2) === '22')
     let master23 = data.filter(x => x['img'].split('.')[0].slice(-2) === '23')
 
-    insertList(phd);
-    insertList(master22);
-    insertList(master23);
-
-    let phdParagraph = document.createElement('p');
-    phdParagraph.textContent = '2021 Ph.D. Students';
-    let phdList = document.getElementById('master22');
-    phdList.parentNode.InsertAfter(phdParagraph, $('#graduates-table'));
-
-    let master22Paragraph = document.createElement('p');
-    master22Paragraph.textContent = '2022 Master Students';
-    let master22List = document.getElementById('master22');
-    master22List.parentNode.insertBefore(master22Paragraph, $('#graduates-table'));
-
-    let master23Paragraph = document.createElement('p');
-    master23Paragraph.textContent = '2023 Master Students';
-    let master23List = document.getElementById('master23'); 
-    master23List.parentNode.insertBefore(master23Paragraph, $('#graduates-table'));
+    insertList(phd, '2021 Ph.D. Students');
+    insertList(master22, '2022 Master Students');
+    insertList(master23, '2023 Master Students');
 
 });
