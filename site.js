@@ -131,7 +131,7 @@ $.getJSON('/graduates.json', function (data) {
         let el = $('#graduates-table')
         let str = s
 
-        el.html(el.html() + `<p class="text-left text-indent-2"><b>${str}</b></p>`)
+        el.html(el.html() + `<p class="text-center text-indent-2"><b>${str}</b></p>`)
         for (let i = 0; i < (l.length + 3) / 4; i++) {
             let innerHtml = '';
 

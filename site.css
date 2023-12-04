@@ -629,6 +629,10 @@ div.paragraph ol, div.paragraph ol li {
     text-align: left !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
 .text-indent-2 {
     text-indent: 2em !important;
 }
