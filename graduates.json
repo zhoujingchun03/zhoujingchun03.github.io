@@ -77,6 +77,13 @@
         "job_zh": "大连海事大学"
     },
     {
+        "img": "xjq23.jpg",
+        "name": "Jiaqiang Xia",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
         "img": "csh23.jpg",
         "name": "Shuhan Chen",
         "finally": "Master Student",
@@ -86,13 +93,6 @@
     {
         "img": "fwy23.jpg",
         "name": "Wenyu Fan",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "xjq23.jpg",
-        "name": "Jiaqiang Xia",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
