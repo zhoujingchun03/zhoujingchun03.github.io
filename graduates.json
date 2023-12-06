@@ -13,9 +13,9 @@
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
     },
-    {
-        "img": "zb22.jpg",
-        "name": "Bo Zhang",
+     {
+        "img": "lq22.jpg",
+        "name": "Qian Liu",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
@@ -23,6 +23,13 @@
     {
         "img": "wsy22.png",
         "name": "Shiyin Wang",
+        "finally": "Master Student",
+        "job_en": "Dalian Maritime University",
+        "job_zh": "大连海事大学"
+    },
+    {
+        "img": "zb22.jpg",
+        "name": "Bo Zhang",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
