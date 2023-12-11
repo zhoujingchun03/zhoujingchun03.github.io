@@ -49,13 +49,6 @@
         "job_zh": "大连海事大学"
     },
     {
-        "img": "lzl22.jpg",
-        "name": "Zonglin Liang",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
         "img": "lcj23.jpg",
         "name": "Chunjiang Liu",
         "finally": "Master Student",
@@ -121,13 +114,6 @@
     {
         "img": "zcy23.jpg",
         "name": "Chenyang Yang",
-        "finally": "Master Student",
-        "job_en": "Dalian Maritime University",
-        "job_zh": "大连海事大学"
-    },
-    {
-        "img": "zrf23.jpg",
-        "name": "Ruofei Zheng",
         "finally": "Master Student",
         "job_en": "Dalian Maritime University",
         "job_zh": "大连海事大学"
