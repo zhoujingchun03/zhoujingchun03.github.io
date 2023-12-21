@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>WaterHE-NeRF</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="https://reconfusion.github.io/img/overview_combined.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1711">
+    <meta property="og:image:height" content="576">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reconfusion.github.io/"/>
+    <meta property="og:title" content="ReconFusion: 3D Reconstruction with Diffusion Priors" />
+    <meta property="og:description" content="3D reconstruction methods such as Neural Radiance Fields (NeRFs) excel at rendering photorealistic novel views of complex scenes. However, recovering a high-quality NeRF typically requires tens to hundreds of input images, resulting in a time-consuming capture process. We present ReconFusion to reconstruct real-world scenes using only a few photos. Our approach leverages a diffusion prior for novel view synthesis, trained on synthetic and multiview datasets, which regularizes a NeRF-based 3D reconstruction pipeline at novel camera poses beyond those captured by the set of input images. Our method synthesizes realistic geometry and texture in underconstrained regions while preserving the appearance of observed regions. We perform an extensive evaluation across various real-world datasets, including forward-facing and 360-degree scenes, demonstrating significant performance improvements over previous few-view NeRF reconstruction approaches."/>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ReconFusion: 3D Reconstruction with Diffusion Priors" />
+    <meta name="twitter:description" content="3D reconstruction methods such as Neural Radiance Fields (NeRFs) excel at rendering photorealistic novel views of complex scenes. However, recovering a high-quality NeRF typically requires tens to hundreds of input images, resulting in a time-consuming capture process. We present ReconFusion to reconstruct real-world scenes using only a few photos. Our approach leverages a diffusion prior for novel view synthesis, trained on synthetic and multiview datasets, which regularizes a NeRF-based 3D reconstruction pipeline at novel camera poses beyond those captured by the set of input images. Our method synthesizes realistic geometry and texture in underconstrained regions while preserving the appearance of observed regions. We perform an extensive evaluation across various real-world datasets, including forward-facing and 360-degree scenes, demonstrating significant performance improvements over previous few-view NeRF reconstruction approaches."/>
+    <meta name="twitter:image" content="https://reconfusion.github.io/img/overview_combined.png" />
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤔</text></svg>">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/fontawesome.all.min.css">
+	<link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+
+	<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZERS5BVPS"></script>
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-8ZERS5BVPS');
+  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+	<script defer src="js/fontawesome.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/synced_video_selector.js"></script>
+
+</head>
+
+<body style="padding: 5%; width: 100%">
+    <div class="container-lg text-center" style="max-width: 1500px; margin: auto;" id="main">
+    <!-- <div class="container" id="main"> -->
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>WaterHE-NeRF</b>: Water-ray Tracing Neural Radiance Fields for Underwater
+                Scene Reconstruction</br>
+            </h2>
+        </div>
+        <div class="row text-center">
+<div class="col-md-3">
+    </div>
+            <div class="col-md-6 text-center">
+                <ul class="list-inline">
+                    <li>
+                            Jingchun Zhou<sup>1</sup>
+                    </li>
+                    <li>
+                        Tianyu Liang<sup>1</sup>
+                    </li>
+                    <li>
+                        Zongxin He<sup>1</sup>
+                    </li>
+                    <li>
+                        Dehuan Zhang<sup>1</sup>
+                    </li>
+                    <li>
+                        Weishi Zhang<sup>1</sup>
+                    </li>
+                    <li>
+                        Xianping Fu<sup>1</sup>
+                    </li>
+                    <li>
+                        Chongyi Li<sup>2</sup>
+                    </li>
+                </ul>
+            </div>
+<div class="col-md-3">
+    </div>
+            <div class="col-md-12 text-center">
+                <sup>1</sup> Dalian Maritime Unverisity, &nbsp <sup>2</sup> Nankai University, &nbsp
+
+            </div>
+             </div>
+
+
+        <div class="row text-center">
+					
+			     <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.06946"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+			</div>
+
+
+
+        <div class="row">
+            <div class="video-container">
+                <video class="video" style="height: 380px; max-width: 100%;" m id="compVideowater" loop playsinline autoplay muted>
+                    <source src="videos/comparison/watertank_raw_restored.mp4" />
+                </video>
+			</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Neural Radiance Field (NeRF) technology demonstrates immense potential in novel viewpoint synthesis tasks, due to its physics-based volumetric rendering process, which is particularly promising in underwater scenes. Addressing the limitations of existing underwater NeRF methods in handling light attenuation caused by the water medium and the lack of real Ground Truth (GT) supervision, this study proposes WaterHE-NeRF. We develop a new water-ray tracing field by Retinex theory that precisely encodes color, density, and illuminance attenuation in three-dimensional space. WaterHE-NeRF, through its illuminance attenuation mechanism, generates both degraded and clear multi-view images and optimizes image restoration by combining reconstruction loss with Wasserstein distance. Additionally, the use of histogram equalization (HE) as pseudo-GT enhances the network's accuracy in preserving original details and color distribution. Extensive experiments on real underwater datasets and synthetic datasets validate the effectiveness of WaterHE-NeRF. Our code will be made publicly available.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <image src="img/overall.jpg" width=90% style="display: block; margin: auto;"></image>
+                <p class="text-justify">
+                    The overview of WaterHE-NeRF. Specifically, the model takes multi-view degraded underwater images as input, synthesizing underwater novel views and restored novel views. Then the reconstruction loss is computed between underwater views and raw input, while the color distribution loss is computed between restored views and histogram-equalized images.
+
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <b> <font color="#FF8000">Restored Image</font> = <font color="#118ab2">Underwater Image</font>  - <font color="#ef486e">Illuminance Attenuation</font></b>
+                </h3>
+                <image src="img/pipeline.jpg" width=90% style="display: block; margin: auto;"></image>
+                <p class="text-justify">
+                    The pipeline of WaterHE-NeRF. The sample points on the input ray go through the MLP network to predict the pixel value, density, and illuminance attenuation of each point. In the testing stage, the illuminance attenuation is removed to rerender restored images. Our method takes the image after HE as a pseudo GT value and learns the color distribution from it to guide the restored underwater image to have the correct color distribution.
+
+                </p>
+            </div>
+        </div><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+		<h3> WaterHE-NeRF enables restored 3D reconstruction from multi-views</h3><br>
+                <video class="video" style="height: 380px; max-width: 100%;" m id="compVideohorns" loop playsinline autoplay muted>
+                    <source src="videos/comparison/horn_raw_restored.mp4" />
+                </video>
+                <br>
+                    <p class="text-justify" style="text-align: center;">WaterHE-NeRF generalizes restored novel views to horns scenes. </p>
+			</div>
+        </div>
+
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+				  WaterHE-NeRF outperforms other NeRF with underwater enhancement methods
+                </h3><br>
+
+                <div class="text-center ">
+                    <ul class="nav nav-pills center-pills">
+                        <li class="method-pill active" data-value="CIFM+"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>MipNeRF+CIFM+</a></li>
+                        <li class="method-pill" data-value="FUNIEGAN"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>MipNeRF+FUNIEGAN</a></li>
+                    </ul>
+                    <ul class="nav nav-pills center-pills">
+                        <li class="method-pill" data-value="HE"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>MipNeRF+HE</a></li>
+                        <li class="method-pill" data-value="Seathru-NeRF"
+                            onclick="selectCompVideo(this, activeScenePill)"><a>Seathru-NeRF</a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    activeMethodPill = document.querySelector('.method-pill.active-pill');
+                    activeScenePill = document.querySelector('.scene-pill.active-pill');
+                    activeModePill = document.querySelector('.mode-pill.active-pill');
+                </script>
+                
+                <div class="text-center">
+                    <div class="video-container">
+                        <video class="video" style="height: 280px; max-width: 100%;" m id="compVideo0" loop playsinline autoplay muted>
+                            <source src="videos/comparison/waterhorns_CIFM+_vs_ours.mp4" />
+                        </video>
+                        <video class="video" style="height: 280px; max-width: 100%;" id="compVideo1" loop playsinline autoplay muted hidden>
+                            <source src="" />
+                        </video>
+                    </div>
+                    <br>
+                    <p class="text-justify" style="text-align: center;">
+                        WaterHE-NeRF (left) vs baseline methods (right). Scene trained on <span id="compVideoValue">2</span> views.
+                    </p>
+                    <script>
+                        video0 = document.getElementById("compVideo0");
+                        video1 = document.getElementById("compVideo1");
+                        video0.addEventListener('loadedmetadata', function() {
+                            if (activeVidID == 0 && select){
+                                video0.play();
+                                // print video size
+                                console.log(video0.videoWidth, video0.videoHeight);
+                                video0.hidden = false;
+                                video1.hidden = true;
+                            }
+                        });
+                        video1.addEventListener('loadedmetadata', function() {
+                            if (activeVidID == 1 && select){
+                                video1.play();
+                                // print video size
+                                console.log(video1.videoWidth, video1.videoHeight);
+                                video0.hidden = true;
+                                video1.hidden = false;
+                            }
+                        });
+                    </script>
+
+                    <div class="pill-row scene-pills" id="scene-pills">
+                        <span class="pill scene-pill active" data-value="waterhorns" onclick="selectCompVideo(activeMethodPill, this)">
+                            <img class="thumbnail-img" src="thumbnails/waterhorns.png" alt="waterhorns" width="64">
+                        </span>
+                        <span class="pill scene-pill" data-value="watertank" onclick="selectCompVideo(activeMethodPill, this)">
+                            <img class="thumbnail-img" src="thumbnails/watertank.png" alt="watertank" width="64">
+                        </span>
+                    </div>
+
+                    <script>
+                        activeMethodPill = document.querySelector('.method-pill.active-pill');
+                        activeScenePill = document.querySelector('.scene-pill.active-pill');
+                        activeModePill = document.querySelector('.mode-pill.active-pill');
+                    </script>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+				  <p class="text-justify">
+                    <textarea id="bibtex" class="form-control" overflow="hidden" readonly>
+@misc{zhou2023waterhenerf,
+      title={WaterHE-NeRF: Water-ray Tracing Neural Radiance Fields for Underwater Scene Reconstruction},
+      author={Jingchun Zhou and Tianyu Liang and Zongxin He and Dehuan Zhang and Weishi Zhang and Xianping Fu and Chongyi Li},
+      year={2023},
+      eprint={2312.06946},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</textarea></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                We are grateful to the High Performance Computing Center of Dalian Maritime University for partial support of this work.
+                    <br><br>
+                The website template was borrowed from <a href="https://reconfusion.github.io/">Reconfusion</a> and <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
